@@ -4,7 +4,7 @@ build
 dist
 Mappers.mirah
 FirstCodenameOneLibrary.java
-!generate-mappers.jar
+!DataMapperANTTasks.jar
 !maven-ant-tasks-2.1.3.jar
 mappers/src/theme.res
 *.class
