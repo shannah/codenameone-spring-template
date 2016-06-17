@@ -39,6 +39,37 @@ This application consists of 3 projects:
 * server - A maven Spring project used for the server.
 * shared - A Netbeans project where you can store "shared" classes that can be used in both the client and server project.
 
+## Common Tasks
+
+### Starting the Server
+
+* Open the "server" project in Netbeans.
+* Press "Run" in the IDE.  You may need to configure Netbeans to set up your development server, but it will walk you through this.  I generally use the GlassFish 4.1 that is bundled with Netbeans.
+
+### Running the Client in the Simulator
+
+* Open the "client" project in Netbeans.
+* Press "Run".  This will open the client in the Codename One simulator.  It should be configured to connect to your local server.
+
+### Building the Android App
+
+In terminal in the root directory of the `codenameone-spring-template` project:
+
+~~~~
+$ ant build-local-android
+~~~~
+
+This android app will be configured to connect to your local server.
+
+### Building the iOS App
+
+~~~~
+$ant build-local-ios
+~~~~
+
+This iOS app will be configured to connect to your local server.
+
+
 
 
 
