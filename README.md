@@ -41,17 +41,21 @@ This application consists of 3 projects:
 
 ## Common Tasks
 
-### Starting the Server
+### Working in the Local Development Environment
+
+This project supports buidling and testing in both "local" and "production" environments.  When building for the "local" environment, you will be running the `server` project on a local java web server (like the GlassFish that is bundled with Netbeans), and the client app will communicate with that local server.  When building for the "production" environment, you would be deploying your server project as a .war and hosting on a publicly available server (usually) e.g. on AWS or a production Tomcat or Glassfish installation, and the client apps would be configured to communicate with this server.
+
+#### Starting the Server
 
 * Open the "server" project in Netbeans.
 * Press "Run" in the IDE.  You may need to configure Netbeans to set up your development server, but it will walk you through this.  I generally use the GlassFish 4.1 that is bundled with Netbeans.
 
-### Running the Client in the Simulator
+#### Running the Client in the Simulator
 
 * Open the "client" project in Netbeans.
 * Press "Run".  This will open the client in the Codename One simulator.  It should be configured to connect to your local server.
 
-### Building the Android App
+#### Building the Android App
 
 In terminal in the root directory of the `codenameone-spring-template` project:
 
@@ -61,7 +65,7 @@ $ ant build-local-android
 
 This android app will be configured to connect to your local server.
 
-### Building the iOS App
+#### Building the iOS App
 
 ~~~~
 $ant build-local-ios
