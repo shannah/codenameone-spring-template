@@ -2,8 +2,17 @@
 
 This repository serves as a template for a Client-Server mobile application that uses Codename One for the client and Spring for the server.
 
-## Setup
+## Features
 
+* Spring REST MVC Web Service back end.
+* Codename One Front End - Deployable to iOS, Android, Javascript, Windows Phone, Windows UWP, J2ME, BlackBerry, and Desktop.
+* Shared subproject shared by both client and server projects.
+* Pass POJOs back and forth from server to client seamlessly via webservice.
+* Integrated Push via simple config file. (Requires Codename One Pro account)
+* Automated builds for both Local (development) and Production environments.
+* Integrated Social Media integration (requires some configuration).  E.g. Facebook and Google Login.
+
+## Setup
 
 1. Check out from GitHub
 
