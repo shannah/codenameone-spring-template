@@ -99,6 +99,7 @@ public class RESTClient implements WebServiceClient {
         // This mimetype is just arbitrarily made up.  Just needs to match the one
         // in MobileDeviceRESTServiceConfiguration in the server project
         req.setContentType("application/cn1");
+        req.addRequestHeader("accept", "application/cn1");
         req.setFailSilently(true);
         
         NetworkManager.getInstance().addToQueue(req);
