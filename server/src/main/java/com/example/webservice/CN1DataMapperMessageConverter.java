@@ -5,6 +5,7 @@
  */
 package com.example.webservice;
 
+import ca.weblite.codename1.mapper.DataMapper;
 import com.example.dto.Mappers;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -25,6 +26,9 @@ public class CN1DataMapperMessageConverter extends AbstractHttpMessageConverter 
 
     public CN1DataMapperMessageConverter() {
         super(new MediaType("application", "cn1"));
+        for (DataMapper m : Mappers.getInstance().getContext().values()) {
+            m.setOutputDatesAsLongs(true);
+        }
     }
 
     @Override
