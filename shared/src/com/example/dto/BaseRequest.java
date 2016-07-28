@@ -5,7 +5,7 @@
  */
 package com.example.dto;
 
-import java.util.Map;
+import java.util.HashMap;
 
 /**
  *
@@ -14,7 +14,7 @@ import java.util.Map;
 public class BaseRequest {
     private int id;
     private String deviceId;
-    private Map requestData;
+    private HashMap requestData;
 
     /**
      * @return the id
@@ -41,14 +41,14 @@ public class BaseRequest {
     /**
      * @return the requestData
      */
-    public Map getRequestData() {
+    public HashMap getRequestData() {
         return requestData;
     }
 
     /**
      * @param requestData the requestData to set
      */
-    public void setRequestData(Map requestData) {
+    public void setRequestData(HashMap requestData) {
         this.requestData = requestData;
     }
     

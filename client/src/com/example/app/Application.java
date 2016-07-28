@@ -134,13 +134,14 @@ public class Application implements PushCallback  {
         
         mainForm = new MainForm();
         
-        
-        Display.getInstance().callSerially(() -> {
-            System.out.println("Registering device for push notification with SenderID: " + GOOGLE_PROJECT_ID);
-            Hashtable metaData = new Hashtable();
-            metaData.put(com.codename1.push.Push.GOOGLE_PUSH_KEY, GOOGLE_PROJECT_ID);
-            Display.getInstance().registerPush(metaData, true);
-        });
+        if (GOOGLE_PROJECT_ID != null) {
+            Display.getInstance().callSerially(() -> {
+                System.out.println("Registering device for push notification with SenderID: " + GOOGLE_PROJECT_ID);
+                Hashtable metaData = new Hashtable();
+                metaData.put(com.codename1.push.Push.GOOGLE_PUSH_KEY, GOOGLE_PROJECT_ID);
+                Display.getInstance().registerPush(metaData, true);
+            });
+        }
         
         
         System.out.println("Showing main form");

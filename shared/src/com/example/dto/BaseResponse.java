@@ -6,7 +6,7 @@
 package com.example.dto;
 
 import com.example.dto.enums.ResponseCode;
-import java.util.Map;
+import java.util.HashMap;
 
 /**
  *
@@ -15,7 +15,7 @@ import java.util.Map;
 public class BaseResponse {
     private ResponseCode code;
     private String message;
-    private Map responseData;
+    private HashMap responseData;
 
     /**
      * @return the code
@@ -48,14 +48,14 @@ public class BaseResponse {
     /**
      * @return the responseData
      */
-    public Map getResponseData() {
+    public HashMap getResponseData() {
         return responseData;
     }
 
     /**
      * @param responseData the responseData to set
      */
-    public void setResponseData(Map responseData) {
+    public void setResponseData(HashMap responseData) {
         this.responseData = responseData;
     }
     

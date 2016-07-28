@@ -26,7 +26,7 @@ public class MockDataWebService implements WebServiceClient {
    
     @Override
     public void updateDeviceLocation(UpdateDeviceRequest request, Callback<UpdateDeviceResponse> callback) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     
