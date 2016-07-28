@@ -39,7 +39,7 @@ public class RESTClient implements WebServiceClient {
      * @return The response from the server
      * @throws IOException If there was a problem connecting to the server.
      */
-    private void sendRequest(String url, final BaseRequest request, Callback<BaseResponse> callback) {
+    public void sendRequest(String url, final BaseRequest request, Callback<BaseResponse> callback) {
         
         if (Push.getPushKey() != null) {
             request.setDeviceId(Push.getPushKey());
