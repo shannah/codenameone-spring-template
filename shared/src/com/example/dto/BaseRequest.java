@@ -5,6 +5,8 @@
  */
 package com.example.dto;
 
+import java.util.Map;
+
 /**
  *
  * @author shannah
@@ -12,6 +14,7 @@ package com.example.dto;
 public class BaseRequest {
     private int id;
     private String deviceId;
+    private Map requestData;
 
     /**
      * @return the id
@@ -33,7 +36,20 @@ public class BaseRequest {
 
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
+    } 
+
+    /**
+     * @return the requestData
+     */
+    public Map getRequestData() {
+        return requestData;
     }
-    
+
+    /**
+     * @param requestData the requestData to set
+     */
+    public void setRequestData(Map requestData) {
+        this.requestData = requestData;
+    }
     
 }
