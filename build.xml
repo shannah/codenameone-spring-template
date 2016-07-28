@@ -8,8 +8,12 @@
              uri="antlib:org.apache.maven.artifact.ant"
              classpathref="maven-ant-tasks.classpath" />
              
-             
-  <target name="configure" description="Download dependencies">
+     
+  <target name="check-configured">
+    <available file=".configured" property="configured.present"/>
+  </target> 
+          
+  <target name="configure" description="Download dependencies" depends="check-configured" unless="configured.present">
         <get src="https://github.com/shannah/cn1make/raw/master/configure.xml" dest="client/configure.xml" skipexisting="true"/>
         <ant inheritall="false" dir="client" antfile="configure.xml"/>
         <delete file="client/configure.xml"/>
