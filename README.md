@@ -14,31 +14,32 @@ This repository serves as a template for a Client-Server mobile application that
 
 ## Setup
 
-1. Check out from GitHub
+Setup requires the following tools to be installed in your command line environment path:
 
-         $ git clone https://github.com/shannah/codenameone-spring-template.git
-         $ cd codenameone-spring-template
-2. Copy the `config.properties.sample` file to `config.properties`, then edit it with your application details:
+1. Yeoman
+2. Ant
+3. Git
  
- At the start the file will look like:
+For the older (manual) setup instructions, see [manual setup](https://github.com/shannah/codenameone-spring-template/wiki/Manual-Setup-Instructions)
 
-        base.package.name=com.example
-        artifact.prefix=com-example-app
-        base.package.path=com/example
+Instructions:
 
- Suppose you want your app's package namespace to be under `com.yourdomain` instead of `com.example`.  Then you would change it to:
-        
-        base.package.name=com.yourdomain
-        artifact.prefix=com-yourdomain-app
-        base.package.path=com/yourdomain
-3. Now run the `setup` task.
-        
-        $ ant setup
-        
- This will change all of the default files in the template to use your custom base names.
-4. Install the shared dependencies into the client and server projects.
+Open your command-prompt, and navigate to the directory where you want to create your project.  Then
 
-        $ ant install-shared
+~~~~
+$ yo cn1-spring your-app-name
+~~~~
+
+This will create a project in a directory named "your-app-name".
+
+You will be prompted to enter the base package for your app.  Will be used as the base package for mobile project, and will double as your app ID in the Google Play and iTunes stores.  It will also be used in various other parts of your projects for naming things.
+
+~~~~
+Steves-iMac:test1 shannah$ yo cn1-spring-app myapp
+? Base app package (com.example.myapp) 
+~~~~
+
+Once you have entered the base app package, it will generate a ready-to-use project.
 
 ## Project Layout
 
@@ -66,7 +67,7 @@ This project supports buidling and testing in both "local" and "production" envi
 
 #### Building the Android App
 
-In terminal in the root directory of the `codenameone-spring-template` project:
+In terminal in the root directory of the your project:
 
 ~~~~
 $ ant build-local-android
